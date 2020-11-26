@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   background-image: url("./background.jpg");
   background-size: cover;
   background-position: center;

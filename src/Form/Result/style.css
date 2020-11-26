@@ -1,0 +1,8 @@
+.result {
+  font-size: 25px;
+  font: normal;
+}
+
+.result--border{
+  border-bottom: 1px solid rgb(228, 188, 127);
+}
