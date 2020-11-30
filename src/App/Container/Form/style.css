@@ -5,6 +5,12 @@
   margin: 10px;
 }
 
+@media(max-width: 767px){
+  .form__labelText{
+    text-align: unset;
+  }
+}
+
 .form__field {
   width: 100%;
   max-width: 400px;
