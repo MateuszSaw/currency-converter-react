@@ -1,0 +1,7 @@
+.displayClock{
+  text-align: right;
+  margin: 10px;
+  color:  hsl(36, 45%, 50%);
+  font-family: 'Space Mono', monospace;
+  font-size: small;
+}

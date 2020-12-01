@@ -3,7 +3,7 @@ import "./style.css";
 
 const Header = ({title}) => (
   <header className="header">
-    <h2>{title}</h2>
+    {title}
   </header>
 );
 

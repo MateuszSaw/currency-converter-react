@@ -1,6 +1,7 @@
 .result {
   font-size: 25px;
   font: normal;
+  color:  hsl(36, 45%, 50%);
 }
 
 .result--border{
