@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.css"
+import { Wrapper } from "./styled";
 
 const Container = (props) => (
-  <div className="container">
+  <Wrapper>
     {props.children}
-  </div>
+  </Wrapper>
 );
 
 export default Container;

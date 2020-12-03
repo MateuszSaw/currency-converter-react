@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./style.css";
 import Button from "./Button";
 import Result from "./Result";
+import { LabelText, FormField } from "./styled"
 
 const Form = ({ currencies, calculateResult, result })=> {
   const [amount, setAmount] = useState("");
@@ -12,17 +12,13 @@ const Form = ({ currencies, calculateResult, result })=> {
     calculateResult(amount, currency);
   }
   return (
-  <form
-    className="form"
-    onSubmit={onFormSubmit}
-  >
+  <form onSubmit={onFormSubmit}>
   <p>
     <label>
-      <span className="form__labelText">Kwota w zł:</span>
-      <input
+      <LabelText>Kwota w zł:</LabelText>
+      <FormField
         value={amount}
         onChange={({ target }) => setAmount(target.value)}
-        className="form__field"
         type="number"
         placeholder="Kwota"
         step="0.01"
@@ -32,20 +28,21 @@ const Form = ({ currencies, calculateResult, result })=> {
   </p>
   <p>
     <label>
-    <span className="form__labelText">Waluta:</span>
-      <select
+    <LabelText>Waluta:</LabelText>
+      <FormField
+        as="select"
         value = {currency}
         onChange ={({target}) => setCurrency(target.value)}
-        className="form__field">
-          {currencies = currencies.map(currency => (
-            <option
-              key={currency.shortName}
-              value={currency.shortName}
-            >
-              {currency.name}
-            </option>
+      >
+        {currencies = currencies.map(currency => (
+          <option
+            key={currency.shortName}
+            value={currency.shortName}
+          >
+            {currency.name}
+          </option>
           ))};
-      </select>
+      </FormField>
     </label>
   </p>
   <Button />

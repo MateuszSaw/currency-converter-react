@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { StyledButton } from "./styled";
 
 const Button = () => (
-<button className="button">Przelicz</button>
+<StyledButton>Przelicz</StyledButton>
 );
 
 export default Button;
