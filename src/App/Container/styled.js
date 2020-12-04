@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-basis: 700px;
   margin: 20px;
   padding: 20px;
-  box-shadow: 0 0 15px 10px rgb(228, 188, 127);
+  box-shadow: 0 0 15px 10px ${({ theme }) => theme.colors.goldSand};
   border-radius: 10px;
   text-align: center;
 `;

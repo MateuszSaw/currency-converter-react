@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   width: 50%;
-  background-color: hsl(36, 65%, 70%);
-  color: white;
+  background-color: ${({ theme }) => theme.colors.goldSand};
+  color: ${({ theme }) => theme.colors.white};
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -12,10 +12,10 @@ export const StyledButton = styled.button`
   margin: 15px;
 
   &:hover{
-    background-color: hsl(36, 55%, 60%);
+    filter: brightness(105%);
   }
   &:focus{
-    background-color: hsl(36, 45%, 50%);
+    filter: brightness(110%);
     outline: none;
     transform: scale(1.1);
   }

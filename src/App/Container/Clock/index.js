@@ -1,5 +1,5 @@
 import React from 'react';
-import { DisplayClock } from './styled';
+import { Wrapper } from './styled';
 import { useCurrentDate } from './useCurrentDate';
 
 const formatDate = (date) => date.toLocaleString(undefined, {
@@ -14,11 +14,11 @@ const formatDate = (date) => date.toLocaleString(undefined, {
 const Clock = () => {
   const date = useCurrentDate();
   return (
-    <DisplayClock>
+    <Wrapper>
       Dzisiaj jest
       {" "}
       {formatDate(date)}
-    </DisplayClock>
+    </Wrapper>
     );
 }
 export default Clock;
