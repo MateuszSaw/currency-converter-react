@@ -19,3 +19,14 @@ export const FormField = styled.input`
   border-radius: 10px;
   outline: none;
 `;
+
+export const Loading = styled.p`
+  font-size: 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.goldSand};
+  line-height: 2;
+  padding: 5px;
+`;
+
+export const Error = styled(Loading)`
+  color: red;
+`;

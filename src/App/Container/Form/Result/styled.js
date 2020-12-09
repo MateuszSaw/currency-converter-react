@@ -9,3 +9,4 @@ export const Wrapper = styled.strong`
     border-bottom: 1px solid ${({ theme }) => theme.colors.goldSand};
   `}
 `;
+

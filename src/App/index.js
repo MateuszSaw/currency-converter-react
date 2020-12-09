@@ -3,21 +3,18 @@ import Container from './Container';
 import Form from "./Container/Form";
 import Header from "./Container/Header";
 import Clock from "./Container/Clock";
-import { currencies } from "./currencies";
+import { useRatesData } from "./useRatesData";
 
 
 function App() {
-
   const [result, setResult] = useState();
+  const ratesData = useRatesData()
 
   const calculateResult = (amount, currency) => {
-    const rate = currencies
-    .find(({ shortName }) => shortName === currency)
-    .rate;
-
+    const rate = ratesData.currencies[currency];
     setResult({
       sourceAmount: +amount,
-      targetAmount: amount / rate,
+      targetAmount: amount * rate,
       currency
     });
 
@@ -27,9 +24,9 @@ function App() {
       <Clock />
       <Header title="Przelicznik walut"/>
       <Form
-      currencies={currencies}
       calculateResult={calculateResult}
-      result = {result}
+      result={result}
+      ratesData={ratesData}
       />
     </Container>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  width: 50%;
+  width: 80%;
   background-color: ${({ theme }) => theme.colors.goldSand};
   color: ${({ theme }) => theme.colors.white};
   padding: 10px;
@@ -9,7 +9,6 @@ export const StyledButton = styled.button`
   border-radius: 10px;
   font-size: 20px;
   transition: ease-out 0.5s;
-  margin: 15px;
 
   &:hover{
     filter: brightness(105%);

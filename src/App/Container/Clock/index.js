@@ -13,6 +13,7 @@ const formatDate = (date) => date.toLocaleString(undefined, {
 
 const Clock = () => {
   const date = useCurrentDate();
+
   return (
     <Wrapper>
       Dzisiaj jest
