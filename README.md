@@ -1,6 +1,16 @@
 # Currency converter
 
-description
+# Technologies used:
+HTML
+CSS
+JavaScript
+React.js
+styled-components
+customs-hook
+METHODOLOGIES USED:
+JSX
+Fetch API
+Imutabillity convention
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
