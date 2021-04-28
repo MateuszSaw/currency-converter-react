@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ResultContext } from "../../Context/ResultContext";
+import { useRatesData } from "../../useRatesData";
 import Button from "./Button";
 import Result from "./Result";
 import { LabelText, FormField, Loading, Error} from "./styled"
 
-const Form = ({ calculateResult, result, ratesData })=> {
+const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("EUR");
+  const { calculateResult } = useContext(ResultContext);
+  const ratesData = useRatesData();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -62,9 +66,7 @@ const Form = ({ calculateResult, result, ratesData })=> {
             aktualne na dzień: <strong>{ratesData.date}</strong>
           </p>
         <p>
-         <Result
-            result={result}
-        />
+         <Result/>
         </p>
       </form>
       )
