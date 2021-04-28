@@ -4,6 +4,7 @@ import Form from "./Container/Form";
 import Header from "./Container/Header";
 import Clock from "./Container/Clock";
 import { useRatesData } from "./useRatesData";
+import { ResultContext } from "./Context/ResultContext";
 
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
     <Container>
       <Clock />
       <Header title="Przelicznik walut"/>
+      <ResultContext.Provider value={{result}}>
       <Form
-      calculateResult={calculateResult}
-      result={result}
-      ratesData={ratesData}
+        calculateResult={calculateResult}
+        ratesData={ratesData}
       />
+      </ResultContext.Provider>
     </Container>
   );
 }

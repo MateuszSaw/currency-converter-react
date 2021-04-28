@@ -3,7 +3,7 @@ import Button from "./Button";
 import Result from "./Result";
 import { LabelText, FormField, Loading, Error} from "./styled"
 
-const Form = ({ calculateResult, result, ratesData })=> {
+const Form = ({ calculateResult, ratesData })=> {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("EUR");
 
@@ -62,9 +62,7 @@ const Form = ({ calculateResult, result, ratesData })=> {
             aktualne na dzień: <strong>{ratesData.date}</strong>
           </p>
         <p>
-         <Result
-            result={result}
-        />
+         <Result/>
         </p>
       </form>
       )
