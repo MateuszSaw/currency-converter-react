@@ -11,7 +11,7 @@ export const useRatesData = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      const url = "https://api.exchangeratesapi.io/latest?base=PLN";
+      const url = "https://api.exchangerate.host/latest?base=PLN";
     axios.get(url)
       .then(response => setRatesData({
         date: response.data.date,
